@@ -1,0 +1,25 @@
+
+
+This code was designed and tested in Linux (Ubuntu 16.04.4) only.
+
+Run "$sudo make install" to install the necessary packages.
+
+The files that produce the figures of the paper¹ are in the format "main-<number><letter>.cpp", where <number><letter> indicate the number/letter of the image  (e.g. 1a, 1b, 2a, etc.)
+To run the experiment of a particular figure, run "$make v=main-<number><letter>.cpp", substituting with the corresponding figure number/letter.
+The output will be saved in a folder named "out-main-<number><letter>.cpp". You may change the output folder name by adding the attribute "f", e.g. "$make v=main1a.cpp f=myfolder".
+
+The graphical interface shows the optimization progress, and is saved in SVG and PDF after the program terminates.
+You may press ESC to end the optimization prematurely (and export the graph at that point to SVG and PDF).
+The graph displayed in the graphical interface appears in a different format and the fonts will appear corrupted, but should appear correctly in the exported SVG and PDF.
+
+The file "probl1-solution.cpp" computes the solution (x*) for Problem #1, as described in Appendix A of the paper¹.
+
+The output graphs of each code might not look exactly the same as the figures of the paper¹, because:
+- The running times and the random number generator seed may differ in some cases, and
+- some figures were manually edited for publication (e.g. changing fonts and colors for better visual clarity, etc.)
+
+This code is also available online at: http://github.com/guthpf/PS-MCLS2018
+
+
+
+¹ G. T. Pfeiffer, Y. Sato, "ON STOCHASTIC OPTIMIZATION METHODS FOR MONTE CARLO LEAST-SQUARES PROBLEMS", 2018. (https://arxiv.org/abs/1804.10079)
